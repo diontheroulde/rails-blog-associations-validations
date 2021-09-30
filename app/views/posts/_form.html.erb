@@ -16,7 +16,17 @@
     <%= f.text_field :name %><br>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_field :content %><br>
   </div>
+<br>
+<br>
+<h4>Select a tag</h4>
+  <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :name %>
+
+
+<div class="actions">
+    <%= f.submit %>
+</div>
 <% end %>
